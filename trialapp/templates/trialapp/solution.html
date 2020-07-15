@@ -1,0 +1,25 @@
+<html>
+{% extends 'base.html' %}
+<head>
+
+</head>
+
+<body>
+{% block content%}
+<table style="margin-left:300; margin-top: 100">
+            {% for n in e %}
+            <tr>
+            {% for l in n %}
+              <td>
+                <input id="{{l}}{{n}}" type="text" name="{{l}}{{n}}" value="{{l}}" class="square" maxlength="1" size="1" readonly>
+              </td>
+            {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+{% endblock content %}
+</body>
+
+
+
+</html>

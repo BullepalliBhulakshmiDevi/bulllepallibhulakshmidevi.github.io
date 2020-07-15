@@ -1,0 +1,24 @@
+<html>
+{% extends 'base.html' %}
+<body>
+{% block content%}
+ <h1 style='text-align:center;color:blue'>{{ a }}</h1>
+ <form method="get_digit">
+  <table style="margin-left:300; margin-top: 100">
+            {% for n in "123456789" %}
+            <tr>
+            {% for l in "ABCDEFGHI" %}
+              <td>
+                <input id="{{l}}{{n}}" type="text" name="{{l}}{{n}}" value="0" class="square" maxlength="1" size="1">
+              </td>
+            {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+      
+           <input id="solve" type="submit" style="margin-left:450;margin-top:50" value="solve">
+           </form>
+           <a href='/solution.html/' style="color:blue; margin-left:420">SOLUTION PAGE</a>
+{% endblock content%}
+</body>
+</html>
